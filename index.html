@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GestorOne - Sistema de Gestão</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f4ea; /* verde claro */
+    color: #2e7d32; /* verde escuro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Cabeçalho fixo */
+  header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #a5d6a7; /* verde claro */
+  }
+
+  /* Espaço para o conteúdo não ficar atrás do header */
+  main {
+    flex: 1;
+    padding: 6rem 2rem 4rem; /* topo para header e base para footer */
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Rodapé fixo */
+  footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Botões padrão */
+  button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #1b4d24;
+  }
+
+  /* Formulários */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin: 0.5rem 0 1.2rem 0;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgb(46 125 50 / 0.2);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Tabelas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+  th, td {
+    border: 1px solid #a5d6a7;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: #c8e6c9; /* verde mais claro */
+  }
+
+  /* Responsividade para mobile */
+  @media (max-width: 600px) {
+    header, footer {
+      padding: 1rem;
+    }
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+    main {
+      padding: 5rem 1rem 4rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>GestorOne</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Login</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Bem-vindo ao GestorOne</h2>
+    <p>Seu sistema de gestão completo, moderno e eficiente para controlar compras, ordens de serviço, finanças e muito mais.</p>
+    <p>Simples, rápido e com tudo que sua empresa precisa para crescer.</p>
+    <button>Saiba Mais</button>
+  </section>
+
+  <section class="card">
+    <h3>Login de Usuário</h3>
+    <form>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail" required />
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" placeholder="Digite sua senha" required />
+      
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>Exemplo de tabela de ordens de serviço</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Cliente</th>
+          <th>Serviço</th>
+          <th>Data Entrega</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Maria Silva</td>
+          <td>Impressão Digital</td>
+          <td>20/05/2025</td>
+          <td>Em andamento</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>João Souza</td>
+          <td>Confecção de Camisas</td>
+          <td>25/05/2025</td>
+          <td>Concluído</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 GestorOne - Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
